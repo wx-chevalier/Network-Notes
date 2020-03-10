@@ -6,7 +6,8 @@
     - [HTTP 请求](/HTTP/HTTP%20请求.md)
     - [发展历史](/HTTP/发展历史.md)
     - [状态码](/HTTP/状态码.md)
-    - [缓存](/HTTP/缓存.md)
+    - [缓存](/HTTP/缓存/README.md)
+      
     - [请求与响应体](/HTTP/请求与响应体.md)
     - [请求与响应头](/HTTP/请求与响应头.md)
   - [HTTP2](/HTTP2/README.md)
