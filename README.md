@@ -14,7 +14,7 @@
   <h3 align="center">Network Series</h3>
 
   <p align="center">
-    网络基础
+    网络与协议·实践笔记
     <br />
     <a href="https://github.com/wx-chevalier/Network-Series"><strong>Explore the docs »</strong></a>
     <br />
