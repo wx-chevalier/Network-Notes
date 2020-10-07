@@ -4,7 +4,7 @@
 
 # Header
 
-响应头域允许服务器传递不能放在状态行的附加信息，这些域主要描述服务器的信息和 Request-URI 进一步的信息。响应头域包含 Age、Location 、 Proxy-Authenticate、Public 、 Retry- After、Server 、 Vary、Warning 、 WWW-Authenticate。对响应头域的扩展要求通讯双方都支持，如果存在不支持的响应头 域，一般将会作为实体头域处理。
+响应头域允许服务器传递不能放在状态行的附加信息，这些域主要描述服务器的信息和 Request-URI 进一步的信息。响应头域包含 Age、Location 、Proxy-Authenticate、Public 、Retry- After、Server 、Vary、Warning 、WWW-Authenticate。对响应头域的扩展要求通讯双方都支持，如果存在不支持的响应头 域，一般将会作为实体头域处理。
 
 | Header             | 解释                                                                                | 示例                                                  |
 | ------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------- |
