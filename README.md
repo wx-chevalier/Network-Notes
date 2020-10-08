@@ -16,14 +16,14 @@
   <p align="center">
     网络与协议·实践笔记
     <br />
-    <a href="https://github.com/wx-chevalier/Network-Series"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/wx-chevalier/Network-Series"><strong>在线阅读</strong></a>
     <br />
     <br />
-    <a href="https://github.com/wx-chevalier/Network-Series">View Demo</a>
+    <a href="https://github.com/wx-chevalier/Network-Series">速览手册</a>
     ·
-    <a href="https://github.com/wx-chevalier/Network-Series/issues">Network-Seriesrt Bug</a>
+    <a href="https://github.com/wx-chevalier/Network-Series/issues">代码实践</a>
     ·
-    <a href="https://github.com/wx-chevalier/Network-Series/issues">Request Feature</a>
+    <a href="https://github.com/wx-chevalier/Network-Series/issues">参考资料</a>
   </p>
 </p>
 
