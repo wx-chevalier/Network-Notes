@@ -30,6 +30,8 @@
     - [OSI 模型](/TCPIP/OSI%20模型.md)
     - [Socks](/TCPIP/Socks.md)
     - [TCP](/TCPIP/TCP/README.md)
-      
+      - [优化算法](/TCPIP/TCP/优化算法.md)
+      - [地址与协议](/TCPIP/TCP/地址与协议.md)
+      - [通信过程](/TCPIP/TCP/通信过程.md)
   - [WebSocket](/WebSocket/README.md)
     
