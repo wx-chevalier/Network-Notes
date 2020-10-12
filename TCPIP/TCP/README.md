@@ -9,9 +9,8 @@
 需要注意的是：(A)不要将确认序号 Ack 与标志位中的 ACK 搞混了。(B)确认方 Ack=发起方 Req+1，两端配对。
 
 建立 TCP 需要三次握手才能建立，而断开连接则需要四次握手。整个过程如下图所示：
-![](http://hi.csdn.net/attachment/201108/7/0_131271823564Rx.gif)
 
-# 层次化模型
+![](http://hi.csdn.net/attachment/201108/7/0_131271823564Rx.gif)
 
 # 连接建立与关闭
 
@@ -22,7 +21,9 @@ TCP 建立连接的过程简单来说，首先 Client 端发送连接请求报�
 ![](https://coding.net/u/hoteam/p/Cache/git/raw/master/2016/8/2/tcp-three-way-handshake-four-wave.png)
 
 - 第一次握手：Client 将标志位 SYN 置为 1，随机产生一个值 seq=J，并将该数据包发送给 Server，Client 进入 SYN_SENT 状态，等待 Server 确认。
+
 - 第二次握手：Server 收到数据包后由标志位 SYN=1 知道 Client 请求建立连接，Server 将标志位 SYN 和 ACK 都置为 1，ack=J+1，随机产生一个值 seq=K，并将该数据包发送给 Client 以确认连接请求，Server 进入 SYN_RCVD 状态。
+
 - 第三次握手：Client 收到确认后，检查 ack 是否为 J+1，ACK 是否为 1，如果正确则将标志位 ACK 置为 1，ack=K+1，并将该数据包发 送给 Server，Server 检查 ack 是否为 K+1，ACK 是否为 1，如果正确则连接建立成功，Client 和 Server 进入 ESTABLISHED 状态，完成三次握手，随后 Client 与 Server 之间可以开始传输数据了。
 
 ## 关闭连接:四次握手
@@ -63,3 +64,7 @@ IP 层收到数据包，交付给 TCP 层，TCP 层发现目的端口是 8080，
 ```
 
 但是有个有意思的例外就是 mysql , 在 Linux 上，当你使用 localhost 来连接数据库的时候，Mysql 会使用 Unix domain socket 来传输数据，这种方式会快一些，因为这是一种进程内通信(IPC)机制，不走网络协议栈，不需要打包拆包，计算校验和，维护序号等操作。当你使用 127.0.0.1 的时候，mysql 还是会使用 TCP/IP 协议栈来进行数据传输。
+
+# 链接
+
+- https://www.sohu.com/a/112493951_464029
