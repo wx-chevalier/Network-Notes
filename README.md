@@ -16,7 +16,7 @@
   <p align="center">
     网络与协议·实践笔记
     <br />
-    <a href="https://github.com/wx-chevalier/Network-Series"><strong>在线阅读</strong></a>
+    <a href="https://github.com/wx-chevalier/Network-Series"><strong>在线阅读 >> </strong></a>
     <br />
     <br />
     <a href="https://github.com/wx-chevalier/Network-Series">速览手册</a>
