@@ -1,14 +1,10 @@
 # HTTP
 
-# URL
+HTTP (HyperText Transfer Protocol, 超文本传输协议)是互联网上应用最为广泛的一种网络协议，它是基于 TCP 的应用层协议，简单地说就是客户端和服务器进行通信的一种规则，它的模式非常简单，就是客户端发起请求，服务器响应请求。HTTP 最早于 1991 年发布，是 0.9 版，不过目前该版本已不再用。HTTP 目前在使用的版本主要有：
 
-在 WWW 上，每一信息资源都有统一的且在网上唯一的地址，该地址就叫 URL(Uniform Resource Locator, 统一资源定位符)，它是 WWW 的统一资源定位标志。URL 由三部分组成：资源类型、存放资源的主机域名、资源文件名。URL 的一般语法格式为：`protocol://hostname[:port]/path/[;parameters][?query]#fragment`。
-
-![](https://i.postimg.cc/wxbh4j9h/image.png)
-
-URL 分为绝对 URL 与相对 URL 两种。绝对 URL 和访问时的状态完全无关。与之相对应的是省略了部分信息的相对（relative）URL，如 `../file.php?text=hello+world`，它需要根据当前浏览所在上下文环境里的基准 URL，才能确定完整的 URL 地址。
-
-# 通用头
+- HTTP/1.0，于 1996 年 5 月发布，引入了多种功能，至今仍在使用当中。
+- HTTP/1.1，于 1997 年 1 月发布，持久连接被默认采用，是目前最流行的版本。
+- HTTP/2 ，于 2015 年 5 月发布，引入了服务器推送等多种功能，是目前最新的版本。
 
 # 链接
 

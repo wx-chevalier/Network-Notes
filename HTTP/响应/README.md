@@ -1,10 +1,49 @@
 # HTTP Response | HTTP 响应详解
 
-![](http://upload-images.jianshu.io/upload_images/1724103-e8ebcab6c80b9044.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+HTTP 响应与 HTTP 请求相似，由三部分组成：
 
-# Header
+- **状态行**：包含 HTTP 协议版本、状态码和状态描述，以空格分隔
+- **响应头**：即消息报头，包含一系列的键值对
+- **响应正文**：返回内容，注意和响应头之间有一个空行
 
-响应头域允许服务器传递不能放在状态行的附加信息，这些域主要描述服务器的信息和 Request-URI 进一步的信息。响应头域包含 Age、Location 、Proxy-Authenticate、Public 、Retry- After、Server 、Vary、Warning 、WWW-Authenticate。对响应头域的扩展要求通讯双方都支持，如果存在不支持的响应头 域，一般将会作为实体头域处理。
+如图所示：
+
+![img](https://ooo.0o0.ooo/2016/12/05/58456e62d49d6.png)
+
+下面是一个 HTTP GET 请求的响应结果：
+
+```
+HTTP/1.1 200 OK
+Server: nginx
+Date: Tue, 29 Nov 2016 13:08:38 GMT
+Content-Type: application/json
+Content-Length: 203
+Connection: close
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
+
+{
+  "args": {},
+  "headers": {
+    "Host": "httpbin.org",
+    "User-Agent": "Paw/2.3.1 (Macintosh; OS X/10.11.3) GCDHTTPRequest"
+  },
+  "origin": "13.75.42.240",
+  "url": "https://httpbin.org/get"
+}
+```
+
+上面的第一行就是一个**状态行**：
+
+```
+HTTP/1.1 200 OK
+```
+
+其中，`200` 是状态码，表示客户端请求成功，`OK` 是相应的状态描述。
+
+# 响应头
+
+响应头域允许服务器传递不能放在状态行的附加信息，这些域主要描述服务器的信息和 Request-URI 进一步的信息。响应头域包含 Age、Location 、Proxy-Authenticate、Public 、Retry-After、Server、Vary、Warning 、WWW-Authenticate。对响应头域的扩展要求通讯双方都支持，如果存在不支持的响应头域，一般将会作为实体头域处理。
 
 | Header             | 解释                                                                                | 示例                                                  |
 | ------------------ | ----------------------------------------------------------------------------------- | ----------------------------------------------------- |
@@ -32,7 +71,7 @@
 | Set-Cookie         | 设置 Http Cookie                                                                    | Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1   |
 | Trailer            | 指出头域在分块传输编码的尾部存在                                                    | Trailer: Max-Forwards                                 |
 | Transfer-Encoding  | 文件传输编码                                                                        | Transfer-Encoding:chunked                             |
-| Vary               | 告诉下游代理是使用缓存响应还是从原始服务器请求                                      | Vary: \*                                              |
+| Vary               | 告诉下游代理是使用缓存响应还是从原始服务器请求                                      | Vary: `*`                                             |
 | Via                | 告知代理客户端响应是通过哪里发送的                                                  | Via: 1.0 fred, 1.1 nowhere.com (Apache/1.1)           |
 | Warning            | 警告实体可能存在的问题                                                              | Warning: 199 Miscellaneous warning                    |
 | WWW-Authenticate   | 表明客户端请求实体应该使用的授权方案                                                | WWW-Authenticate: Basic                               |
