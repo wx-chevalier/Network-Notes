@@ -92,7 +92,7 @@ Cookie: _ga=GA1.2.475034215.1480418329; _gat=1
 | Pragma              | 用来包含实现特定的指令                                                                         | Pragma: no-cache                                        |
 | Proxy-Authorization | 连接到代理的授权证书                                                                           | Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ== |
 | Range               | 只请求实体的一部分，指定范围                                                                   | Range: bytes=500-999                                    |
-| Referer             | 先前网页的地址，当前请求网页紧随其后 , 即来路                                                  | Referer: http://www.zcmhi.com/archives/71.html          |
+| Referer             | 先前网页的地址，当前请求网页紧随其后, 即来路                                                   | Referer: http://www.zcmhi.com/archives/71.html          |
 | TE                  | 客户端愿意接受的传输编码，并通知服务器接受接受尾加头信息                                       | TE: trailers,deflate;q=0.5                              |
 | Upgrade             | 向服务器指定某种传输协议以便服务器进行转换(如果支持)                                           | Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11          |
 | User-Agent          | User-Agent 的内容包含发出请求的用户信息                                                        | User-Agent: Mozilla/5.0 (Linux; X11)                    |
@@ -221,6 +221,6 @@ web 设计者面临的众多难题之一便是怎样处理不同操作系统间�
 
 编码过程非常简单，任何字符只要不是 ASCII 码数字，字母，或者前面提到的标点符，它们都将被转换成字节形式，每个字节都写成这种形式：一个 “%” 后面跟着两位 16 进制的数值。空格是一个特殊情况，因为它们太平常了。它除了被编码成 “%20” 以外，还能编码为一个 “+”。加号 (+) 本身被编码为 %2B。当 / # = & 和 ? 作为名字的一部分来使用时，而不是作为 URL 部分之间的分隔符来使用时，它们都应该被编码。
 
-WARNING 这种策略在存在大量字符集的异构环境中效果不甚理想。例如：在 U.S. Windows 系统中 , é 被编码为 %E9. 在 U.S. Mac 中被编码为 %8E。这种不确定性的存在是现存的 URI 的一个明显的不足。所以在将来 URI 的规范当中应该通过国际资源标识符 (IRIs) 进行改善。
+WARNING 这种策略在存在大量字符集的异构环境中效果不甚理想。例如：在 U.S. Windows 系统中, é 被编码为 %E9. 在 U.S. Mac 中被编码为 %8E。这种不确定性的存在是现存的 URI 的一个明显的不足。所以在将来 URI 的规范当中应该通过国际资源标识符 (IRIs) 进行改善。
 
 类 URL 并不自动执行编码或解码工作。你能生成一个 URL 对象，它可以包括非法的 ASCII 和非 ASCII 字符和 /或%xx。当用方法 getPath() 和 toExternalForm( ) 作为输出方法时，这种字符和转移符不会自动编码或解码。你应对被用来生成一个 URL 对象的字符串对象负责，确保所有字符都会被恰当地编码。
