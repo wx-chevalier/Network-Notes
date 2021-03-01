@@ -67,7 +67,7 @@ SDN、Openflow：软件定义网络里面的一个术语，比如说我们经常
 
 > 本书的精排目录导航版请参考 [https://ng-tech.icu/Network-Series](https://ng-tech.icu/Network-Series)。
 
-# Nav | 导读
+# Nav | 关联导航
 
 # About | 关于
 
