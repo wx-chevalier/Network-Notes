@@ -65,7 +65,7 @@ BGP：主干网自治网络的路由协议，今天有了互联网，互联网�
 
 SDN、Openflow：软件定义网络里面的一个术语，比如说我们经常听到的流表、控制平面，或者转发平面都是 Openflow 里的术语。
 
-> 本书的精排目录导航版请参考 [https://ng-tech.icu/Network-Series](https://ng-tech.icu/Network-Series)。
+> 本书的精排目录导航版请参考 [https://wx-chevalier.github.io/Network-Series](https://wx-chevalier.github.io/Network-Series)。
 
 # Nav | 关联导航
 
@@ -93,9 +93,9 @@ Contributions are what make the open source community such an amazing place to b
 
 ## Copyright & More | 延伸阅读
 
-笔者所有文章遵循[知识共享 署名 - 非商业性使用 - 禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。您还可以前往 [NGTE Books](https://ng-tech.icu/books/) 主页浏览包含知识体系、编程语言、软件工程、模式与架构、Web 与大前端、服务端开发实践与工程架构、分布式基础架构、人工智能与深度学习、产品运营与创业等多类目的书籍列表：
+笔者所有文章遵循[知识共享 署名 - 非商业性使用 - 禁止演绎 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh)，欢迎转载，尊重版权。您还可以前往 [NGTE Books](https://wx-chevalier.github.io/books/) 主页浏览包含知识体系、编程语言、软件工程、模式与架构、Web 与大前端、服务端开发实践与工程架构、分布式基础架构、人工智能与深度学习、产品运营与创业等多类目的书籍列表：
 
-[![NGTE Books](https://s2.ax1x.com/2020/01/18/19uXtI.png)](https://ng-tech.icu/books/)
+[![NGTE Books](https://s2.ax1x.com/2020/01/18/19uXtI.png)](https://wx-chevalier.github.io/books/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
