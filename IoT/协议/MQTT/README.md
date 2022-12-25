@@ -10,7 +10,7 @@ MQTT 的全称为 Message Queue Telemetry Transport（消息队列遥测传输�
 
 之后 IBM 一直将 MQTT 作为一个内部协议在其产品中使用，直到 2010 年，IBM 公开发布了 MQTT 3.1 版本。在 2014 年，MQTT 协议正式成为了 OASIS（结构化信息标准促进组织）的标准协议。MQTT 最大优点在于，可以以极少的代码和有限的带宽，为连接远程设备提供实时可靠的消息服务。作为一种低开销、低带宽占用的即时通讯协议，使其在物联网、小型设备、移动应用等方面有较广泛的应用，譬如受限的环境中，通过卫星链路通信传感器、偶尔拨号的医疗设备、智能家居等等。
 
-![MQTT Broker 示意](https://i.postimg.cc/pdFYRkfQ/image.png)
+![MQTT Broker 示意](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221225150737.png)
 
 MQTT 协议提供一对多的消息发布，可以解除应用程序耦合，信息冗余小。该协议需要客户端和服务端，而协议中主要有三种身份：发布者（Publisher）、代理（Broker，服务器）、订阅者（Subscriber）。其中，消息的发布者和订阅者都是客户端，消息代理是服务器，而消息发布者可以同时是订阅者，实现了生产者与消费者的脱耦。
 

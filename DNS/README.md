@@ -10,7 +10,7 @@
 
 - Authoriative Server - 权威域名服务器就是包含了完整的机器名的域名，例如：www.example.com ，在这台机器上保存了这个具体域名对应的 IP 地址。
 
-![](https://tva1.sinaimg.cn/large/007rAy9hgy1g2sxhs1y9gj30u00k0dgq.jpg)
+![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/007rAy9hgy1g2sxhs1y9gj30u00k0dgq.jpg)
 
 一个用户在浏览器输入了：example.com，这时会产生一个 DNS 查询，从而进入到 DNS Resolver 中；Resolver 会进入到 root server 进行查询；root server 返回了 TLD server 的地址，查询请求转向顶级域名服务，这里是 .com 服务器。递归解析器向 .com 服务器发送一个请求；TLD server 收到请求后会返回 example.com 权威服务器的地址；递归解析器又发了一个向权威服务器查询的请求，至此权威服务器查询自己的映射表拿到 IP；返回查询到的 IP 给了 DNS Resolver；DNS Resolver 返回 IP 给浏览器，浏览器将会用这个 IP 来建立连接，发起请求;客户端通过这个 IP 地址，发起一个 HTTP 请求；服务器解析请求，并返回数据到浏览器。
 

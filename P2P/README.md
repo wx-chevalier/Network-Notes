@@ -4,7 +4,7 @@
 
 NAT 主要做的事情就是地址映射，其作用就是将内网的主机经过 NAT 的映射生成外网的 ip 地址和端口，如下图所示：
 
-![NAT 图解](https://s3.ax1x.com/2020/11/13/D9GAxJ.md.png)
+![NAT 图解](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/D9GAxJ.md.png)
 
 NAT 产生的原因如下：IPV4 的地址不够、处于安全考虑，保证某局域网下的设备的安全。NAT 的种类有以下几种：
 
