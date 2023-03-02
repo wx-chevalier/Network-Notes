@@ -2,7 +2,7 @@
 
 通过网络获取内容既缓慢，成本又高：大的响应需要在客户端和服务器之间进行多次往返通信，这拖延了浏览器可以使用和处理内容的时间，同时也增加了访问者的数据成本。因此，缓存和重用以前获取的资源的能力成为优化性能很关键的一个方面。每个浏览器都实现了 HTTP 缓存！ 我们所要做的就是，确保每个服务器响应都提供正确的 HTTP 头指令，以指导浏览器何时可以缓存响应以及可以缓存多久。服务器在返回响应时，还会发出一组 HTTP 头，用来描述内容类型、长度、缓存指令、验证令牌等。例如，在下图的交互中，服务器返回了一个 1024 字节的响应，指导客户端缓存响应长达 120 秒，并提供验证令牌(x234dff )，在响应过期之后，可以用来验证资源是否被修改。
 
-![](http://o6v08w541.bkt.clouddn.com/http-requestfcafds.png) 我们打开百度首页，可以看下百度的 HTTP 缓存的实现: ![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/561179-20160331162129410-1428753698.gif) 发现对于静态资源的访问都是返回的 200 状态码。
+![](http://o6v08w541.bkt.clouddn.com/http-requestfcafds.png) 我们打开百度首页，可以看下百度的 HTTP 缓存的实现: ![](https://assets.ng-tech.icu/item/561179-20160331162129410-1428753698.gif) 发现对于静态资源的访问都是返回的 200 状态码。
 
 | 头部          | 优势和特点                                                                                                            | 劣势和问题                                                                                                                                                                                                                        |
 | ------------- | --------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -15,19 +15,19 @@
 
 HTTP 报文头部中与缓存相关的字段为: 1. 通用首部字段(就是请求报文和响应报文都能用上的字段)
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/561179-20160401161150504-1030837643.png)
+![](https://assets.ng-tech.icu/item/561179-20160401161150504-1030837643.png)
 
 2. 请求首部字段
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/561179-20160401161240301-2050921595.png)
+![](https://assets.ng-tech.icu/item/561179-20160401161240301-2050921595.png)
 
 3. 响应首部字段
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/561179-20160401161311394-1246877214.png)
+![](https://assets.ng-tech.icu/item/561179-20160401161311394-1246877214.png)
 
 4. 实体首部字段
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/561179-20160401171410441-767100632.png)
+![](https://assets.ng-tech.icu/item/561179-20160401171410441-767100632.png)
 
 # HTTP 1.0: 基于 Pragma&Expires 的缓存实现
 
@@ -72,11 +72,11 @@ HTTP 报文头部中与缓存相关的字段为: 1. 通用首部字段(就是请
 
 作为请求首部时，cache-directive 的可选值有：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/561179-20160403173213113-100043029.png)
+![](https://assets.ng-tech.icu/item/561179-20160403173213113-100043029.png)
 
 作为响应首部时，cache-directive 的可选值有：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/561179-20160403181549941-1360231582.png)
+![](https://assets.ng-tech.icu/item/561179-20160403181549941-1360231582.png)
 
 另外 Cache-Control 允许自由组合可选值，例如：
 
@@ -120,7 +120,7 @@ Cache-Control: no-cache, no-store
 
 Last-Modified 说好却也不是特别好，因为如果在服务器上，一个资源被修改了，但其实际内容根本没发送改变，会因为 Last-Modified 时间匹配不上而返回了整个实体给客户端*(即使客户端缓存里有个一模一样的资源)*。
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/o_div.jpg)
+![](https://assets.ng-tech.icu/item/o_div.jpg)
 
 ## ETag: 根据资源标识符匹配
 
@@ -142,13 +142,13 @@ Last-Modified 说好却也不是特别好，因为如果在服务器上，一个
 
 需要注意的是，如果资源是走分布式服务器(比如 CDN)存储的情况，需要这些服务器上计算 ETag 唯一值的算法保持一致，才不会导致明明同一个文件，在服务器 A 和服务器 B 上生成的 ETag 却不一样。
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/o_div.jpg)
+![](https://assets.ng-tech.icu/item/o_div.jpg)
 
 如果 Last-Modified 和 ETag 同时被使用，则要求它们的验证都必须通过才会返回 304，若其中某个验证没通过，则服务器会按常规返回资源实体及 200 状态码。
 
 在较新的 nginx 上默认是同时开启了这两个功能的：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/561179-20160404021556078-697982021.gif)
+![](https://assets.ng-tech.icu/item/561179-20160404021556078-697982021.gif)
 
 上图的前三条请求是原始请求，接着的三条请求是刷新页面后的新请求，在发新请求之前我们修改了 reset.css 文件，所以它的 Last-Modified 和 ETag 均发生了改变，服务器因此返回了新的文件给客户端*(状态值为 200)*。
 
@@ -182,7 +182,7 @@ http://i.gtimg.cn/vipstyle/vipportal/v4/img/common/logo.png?max_age=2592000
 
 客户端可以通过给图片加上 “max_age” 的参数来定义服务器返回的缓存时间：
 
-![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/561179-20160404115556000-838597877.png)
+![](https://assets.ng-tech.icu/item/561179-20160404115556000-838597877.png)
 
 ## 废弃和更新已缓存的响应
 

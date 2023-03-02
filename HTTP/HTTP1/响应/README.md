@@ -8,7 +8,7 @@ HTTP 响应与 HTTP 请求相似，由三部分组成：
 
 如图所示：
 
-![img](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/58456e62d49d6.png)
+![img](https://assets.ng-tech.icu/item/58456e62d49d6.png)
 
 下面是一个 HTTP GET 请求的响应结果：
 

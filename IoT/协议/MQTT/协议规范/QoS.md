@@ -20,7 +20,7 @@ QoS 是 Sender 和 Receiver 之间的协议，而不是 Publisher 和 Subscriber
 
 QoS0 等级下，Sender 和 Receiver 之间一次消息的传递流程如下：
 
-![QoS0 消息](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221222145706.png)
+![QoS0 消息](https://assets.ng-tech.icu/item/20221222145706.png)
 
 Sender 向 Receiver 发送一个包含消息数据的 PUBLISH 包，然后不管结果如何，丢掉已发送的 PUBLISH 包，一条消息的发送完成。
 
@@ -28,7 +28,7 @@ Sender 向 Receiver 发送一个包含消息数据的 PUBLISH 包，然后不管
 
 QoS1 要保证消息至少到达一次，所以有一个应答的机制。Sender 和 Receiver 的一次消息的传递流程如下：
 
-![QoS1 应答机制](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221222150050.png)
+![QoS1 应答机制](https://assets.ng-tech.icu/item/20221222150050.png)
 
 1. Sender 向 Receiver 发送一个带有数据的 PUBLISH 包，并在本地保存这个 PUBLISH 包；
 2. Receiver 收到 PUBLISH 包以后，向 Sender 发送一个 PUBACK 数据包，PUBACK 数据包没有消息体（Payload），在可变头中有一个包标识（Packet Identifier），和它收到的 PUBLISH 包中的 Packet Identifier 一致。
@@ -43,7 +43,7 @@ QoS1 要保证消息至少到达一次，所以有一个应答的机制。Sender
 
 相比 QoS0 和 QoS1,QoS2 不仅要确保 Receiver 能收到 Sender 发送的消息，还需要确保消息不重复。它的重传和应答机制就要复杂一些，同时开销也是最大的。QoS2 下，一次消息的传递流程如下所示：
 
-![QoS2](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/20221222150524.png)
+![QoS2](https://assets.ng-tech.icu/item/20221222150524.png)
 
 1. Sender 发送 QoS 为 2 的 PUBLISH 数据包，数据包 Packet Identifier 为 P，并在本地保存该 PUBLISH 包；
 2. Receiver 收到 PUBLISH 数据包后，**在本地保存 PUBLISH 包的 Packet Identifier P**，并回复 Sender 一个 PUBREC 数据包，PUBREC 数据包可变头中的 Packet Identifier 为 P，没有消息体（Payload）；

@@ -18,7 +18,7 @@ HTTPS 使用 SSL 通信，所以它的处理速度会比 HTTP 要慢。一是通
 
 SSL 协议，是一种安全传输协议，最初是由 Netscape 在 1996 年发布，由于一些安全的原因 SSL v1.0 和 SSL v2.0 都没有公开，直到 1996 年的 SSL v3.0。TLS 是 SSL v3.0 的升级版，目前市面上所有的 Https 都是用的是 TLS，而不是 SSL。本文中很多地方混用了 SSL 与 TLS 这个名词，大家能够理解就好。
 
-下图描述了在 TCP/IP 协议栈中 TLS( 各子协议)和 HTTP 的关系: ![](https://ngte-superbed.oss-cn-beijing.aliyuncs.com/item/tcp-ip-model.png) 其中 Handshake protocol，Change Ciper Spec protocol 和 Alert protocol 组成了 SSL Handshaking Protocols。Record Protocol 有三个连接状态 (Connection State)，连接状态定义了压缩，加密和 MAC 算法。所有的 Record 都是被当前状态(Current State )确定的算法处理的。
+下图描述了在 TCP/IP 协议栈中 TLS( 各子协议)和 HTTP 的关系: ![](https://assets.ng-tech.icu/item/tcp-ip-model.png) 其中 Handshake protocol，Change Ciper Spec protocol 和 Alert protocol 组成了 SSL Handshaking Protocols。Record Protocol 有三个连接状态 (Connection State)，连接状态定义了压缩，加密和 MAC 算法。所有的 Record 都是被当前状态(Current State )确定的算法处理的。
 
 TLS Handshake Protocol 和 Change Ciper Spec Protocol 会导致 Record Protocol 状态切换。
 
