@@ -33,7 +33,7 @@
 
 # Network Series | 网络基础
 
-[![image.png](https://i.postimg.cc/tT00Xqns/image.png)](https://postimg.cc/gwKtsPDp)
+![TCPIP 分层模型](https://assets.ng-tech.icu/item/20230416204257.png)
 
 - 物理层：主要定义物理设备标准，如网线的接口类型、光纤的接口类型、各种传输介质的传输速率等。它的主要作用是传输比特流(就是由 1、0 转化为电流强弱来进行传输,到达目的地后在转化为 1、0，也就是我们常说的数模转换与模数转换)。这一层的数据叫做比特。
 
