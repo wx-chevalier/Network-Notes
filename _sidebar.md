@@ -1,6 +1,6 @@
   - 1 99.参考资料 [2]
     - [1.1 heibaiying 计算机网络](/99.参考资料/2020-heibaiying-计算机网络.md)
-    - [1.2 透视 HTTP 协议](/99.参考资料/透视%20HTTP%20协议/README.md)
+    - [1.2 《透视 HTTP 协议》笔记](/99.参考资料/《透视%20HTTP%20协议》笔记/README.md)
       
   - [2 DNS [1]](/DNS/README.md)
     - [2.1 DNS 解析分类](/DNS/DNS%20解析分类.md)
