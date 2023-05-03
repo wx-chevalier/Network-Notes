@@ -7,7 +7,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/wx-chevalier/Network-Series">
+  <a href="https://github.com/wx-chevalier/Network-Notes">
     <img src="https://s2.ax1x.com/2020/01/06/lr21MT.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -16,14 +16,14 @@
   <p align="center">
     网络与协议·实践笔记
     <br />
-    <a href="https://github.com/wx-chevalier/Network-Series"><strong>在线阅读 >> </strong></a>
+    <a href="https://github.com/wx-chevalier/Network-Notes"><strong>在线阅读 >> </strong></a>
     <br />
     <br />
-    <a href="https://github.com/wx-chevalier/Network-Series">速览手册</a>
+    <a href="https://github.com/wx-chevalier/Network-Notes">速览手册</a>
     ·
-    <a href="https://github.com/wx-chevalier/Network-Series/issues">代码实践</a>
+    <a href="https://github.com/wx-chevalier/Network-Notes/issues">代码实践</a>
     ·
-    <a href="https://github.com/wx-chevalier/Network-Series/issues">参考资料</a>
+    <a href="https://github.com/wx-chevalier/Network-Notes/issues">参考资料</a>
   </p>
 </p>
 
@@ -65,7 +65,7 @@ BGP：主干网自治网络的路由协议，今天有了互联网，互联网�
 
 SDN、Openflow：软件定义网络里面的一个术语，比如说我们经常听到的流表、控制平面，或者转发平面都是 Openflow 里的术语。
 
-> 本书的精排目录导航版请参考 [https://ng-tech.icu/books/Network-Series](https://ng-tech.icu/books/Network-Series)。
+> 本书的精排目录导航版请参考 [https://ng-tech.icu/books/Network-Notes](https://ng-tech.icu/books/Network-Notes)。
 
 # Nav | 关联导航
 
@@ -100,16 +100,16 @@ Contributions are what make the open source community such an amazing place to b
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/Network-Series.svg?style=flat-square
-[contributors-url]: https://github.com/wx-chevalier/Network-Series/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/Network-Series.svg?style=flat-square
-[forks-url]: https://github.com/wx-chevalier/Network-Series/network/members
-[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/Network-Series.svg?style=flat-square
-[stars-url]: https://github.com/wx-chevalier/Network-Series/stargazers
-[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/Network-Series.svg?style=flat-square
-[issues-url]: https://github.com/wx-chevalier/Network-Series/issues
-[license-shield]: https://img.shields.io/github/license/wx-chevalier/Network-Series.svg?style=flat-square
-[license-url]: https://github.com/wx-chevalier/Network-Series/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/wx-chevalier/Network-Notes.svg?style=flat-square
+[contributors-url]: https://github.com/wx-chevalier/Network-Notes/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/wx-chevalier/Network-Notes.svg?style=flat-square
+[forks-url]: https://github.com/wx-chevalier/Network-Notes/network/members
+[stars-shield]: https://img.shields.io/github/stars/wx-chevalier/Network-Notes.svg?style=flat-square
+[stars-url]: https://github.com/wx-chevalier/Network-Notes/stargazers
+[issues-shield]: https://img.shields.io/github/issues/wx-chevalier/Network-Notes.svg?style=flat-square
+[issues-url]: https://github.com/wx-chevalier/Network-Notes/issues
+[license-shield]: https://img.shields.io/github/license/wx-chevalier/Network-Notes.svg?style=flat-square
+[license-url]: https://github.com/wx-chevalier/Network-Notes/blob/master/LICENSE.txt
 
 ## Links
 
