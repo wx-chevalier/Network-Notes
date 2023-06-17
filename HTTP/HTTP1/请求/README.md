@@ -58,11 +58,11 @@ Cookie: _ga=GA1.2.475034215.1480418329; _gat=1
 
 # Request Line: 请求行
 
-请求行(Request Line)分为三个部分：请求方法、请求地址和协议及版本，以 CRLF(\r\n) 结束。HTTP/1.1 定义的请求方法有 8 种：GET 、POST、PUT 、DELETE、PATCH 、HEAD、OPTIONS 、TRACE, 最常的两种 GET 和 POST，如果是 RESTful 接口的话一般会用到 GET、POST 、DELETE、PUT。
+请求行(Request Line)分为三个部分：请求方法、请求地址和协议及版本，以 CRLF(\r\n) 结束。HTTP/1.1 定义的请求方法有 8 种：GET、POST、PUT、DELETE、PATCH、HEAD、OPTIONS、TRACE, 最常的两种 GET 和 POST，如果是 RESTful 接口的话一般会用到 GET、POST、DELETE、PUT。
 
 ## Request Methods
 
-注意，仅有 POST、PUT 以及 PATCH 这三个动词时会包含请求体，而 GET、HEAD 、DELETE、CONNECT 、TRACE、OPTIONS 这几个动词时不包含请求体。在[请求方法](./请求方法)章节中我们会仔细讨论相关内容。
+注意，仅有 POST、PUT 以及 PATCH 这三个动词时会包含请求体，而 GET、HEAD、DELETE、CONNECT、TRACE、OPTIONS 这几个动词时不包含请求体。在[请求方法](./请求方法)章节中我们会仔细讨论相关内容。
 
 # Header: 请求头
 
@@ -131,7 +131,7 @@ Content-Type: application/json;charset=utf-8
 {"title":"test","sub":[1,2,3]}
 ```
 
-这种方案，可以方便的提交复杂的结构化数据，特别适合 RESTful 的接口。各大抓包工具如 Chrome 自带的开发者工具、Firebug 、Fiddler，都会以树形结构展示 JSON 数据，非常友好。但也有些服务端语言还没有支持这种方式，例如 php 就无法通过 \$\_POST 对象从上面的请求中获得内容。这时候，需要自己动手处理下：在请求头中 Content-Type 为 application/json 时，从 `php://input` 里获得原始输入流，再 `json_decode` 成对象。一些 php 框架已经开始这么做了。
+这种方案，可以方便的提交复杂的结构化数据，特别适合 RESTful 的接口。各大抓包工具如 Chrome 自带的开发者工具、Firebug、Fiddler，都会以树形结构展示 JSON 数据，非常友好。但也有些服务端语言还没有支持这种方式，例如 php 就无法通过 \$\_POST 对象从上面的请求中获得内容。这时候，需要自己动手处理下：在请求头中 Content-Type 为 application/json 时，从 `php://input` 里获得原始输入流，再 `json_decode` 成对象。一些 php 框架已经开始这么做了。
 
 当然 AngularJS 也可以配置为使用 x-www-form-urlencoded 方式提交数据。如有需要，可以参考[这篇文章](http://victorblog.com/2012/12/20/make-angularjs-http-service-behave-like-jquery-ajax/)。
 
