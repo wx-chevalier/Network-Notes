@@ -7,7 +7,7 @@ Retained 消息是指在 PUBLISH 数据包中 Retain 标识设为 1 的消息，
 - 一个 Topic 只能有一条 Retained 消息，发布新的 Retained 消息将覆盖老的 Retained 消息（所以想删除一个 Retained 消息也很简单，只要向这个主题发布一个 Payload 长度为 0 的 Retained 消息就可以了）；
 - 如果订阅者使用通配符订阅主题，它会收到所有匹配的主题上的 Retained 消息；
 - 只有新的订阅者才会收到 Retained 消息，如果订阅者重复订阅一个主题，也会被当做新的订阅者，然后收到 Retained 消息；
-- Broker 收到 Retained 消息后，会单独保存一份，再向当前的订阅者发送一份普通的消息（Retained 标识为 0）。当有新订阅者的时候， Broker 会把保存的这条消息发给新订阅者（Retained 标识为 1）。
+- Broker 收到 Retained 消息后，会单独保存一份，再向当前的订阅者发送一份普通的消息（Retained 标识为 0）。当有新订阅者的时候，Broker 会把保存的这条消息发给新订阅者（Retained 标识为 1）。
 
 Retained 消息和持久性会话的区别：
 
