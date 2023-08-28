@@ -8,8 +8,10 @@
     - 3.1 HTTP1 [4]
       - [3.1.1 响应 [1]](/HTTP/HTTP1/响应/README.md)
         - [3.1.1.1 状态码](/HTTP/HTTP1/响应/状态码.md)
-      - [3.1.2 文件上传 [1]](/HTTP/HTTP1/文件上传/README.md)
-        - [3.1.2.1 Range](/HTTP/HTTP1/文件上传/Range.md)
+      - [3.1.2 文件传输 [2]](/HTTP/HTTP1/文件传输/README.md)
+        - 3.1.2.1 99~参考资料 [1]
+          - [3.1.2.1.1 2023~断点续传下载：深入理解 HTTP Header 中的 Range 和 Content Range 参数](/HTTP/HTTP1/文件传输/99~参考资料/2023~断点续传下载：深入理解%20HTTP%20Header%20中的%20Range%20和%20Content-Range%20参数.md)
+        - [3.1.2.2 Range](/HTTP/HTTP1/文件传输/Range.md)
       - [3.1.3 缓存](/HTTP/HTTP1/缓存/README.md)
         
       - [3.1.4 请求 [3]](/HTTP/HTTP1/请求/README.md)
